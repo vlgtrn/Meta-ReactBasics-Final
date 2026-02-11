@@ -25,11 +25,9 @@ function App() {
     const currentInput = Number(inputRef.current.value);
 
     if (firstValue === null) {
-      // First time pressing an operator: store the first number
       setFirstValue(currentInput);
       setResult(currentInput);
     } else if (pendingOp && !justCalculated) {
-      // Chain operations: calculate previous result first
       const newResult = calculate(firstValue, pendingOp, currentInput);
       setFirstValue(newResult);
       setResult(newResult);
