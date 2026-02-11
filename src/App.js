@@ -74,7 +74,6 @@ function App() {
     e.preventDefault();
     const input = inputRef.current;
 
-    // If we just pressed = and got a result, start fresh with new number
     if (justCalculated) {
       input.value = "";
       setJustCalculated(false);
